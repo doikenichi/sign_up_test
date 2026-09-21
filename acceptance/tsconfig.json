@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ES2025", // Compile TypeScript to modern JavaScript supported by Node.js 24.
+    "lib": ["ES2025", "DOM"], // Include ES2025 built-in APIs and browser DOM types used by Playwright.
+    "module": "NodeNext", // Use Node.js ESM module output compatible with package.json type module.
+    "moduleResolution": "NodeNext", // Resolve imports using Node.js ESM rules, including .js extensions.
+    "types": ["node", "@playwright/test"], // Load global types for Node.js and Playwright tests.
+    "strict": true, // Enable strict type checking to catch unsafe code earlier.
+    "noUnusedLocals": true, // Report local variables, imports, and helpers that are declared but not used.
+    "noUnusedParameters": true, // Report function parameters that are declared but not used.
+    "noEmit": true, // Use TypeScript for type checking only and do not generate compiled files.
+    "esModuleInterop": true, // Allow cleaner default imports from CommonJS-style packages.
+    // "skipLibCheck": true, // Skip checking dependency declaration files to speed up type checking.
+    "forceConsistentCasingInFileNames": true, // Prevent import casing issues across different operating systems.
+    "resolveJsonModule": true, // Allow importing JSON files as typed modules.
+    "isolatedModules": true // Ensure each file can be compiled independently by external tooling.
+  },
+  "include": [
+    "playwright.config.ts",
+    "specs/**/*.ts",
+    "src/**/*.ts"
+  ]
+}

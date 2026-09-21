@@ -1,0 +1,25 @@
+{
+  "name": "acceptance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "biome:fix": "biome check . --write",
+    "biome:ci": "biome ci .",
+    "tsc": "npx tsc -p tsconfig.json --noEmit -w",
+    "postinstall": "npx playwright install",
+    "test:e2e:dev": "cross-env ENV_FILE=env/.env.dev-en playwright test",
+    "test:e2e:prod": "cross-env ENV_FILE=env/.env.prod-en playwright test"
+  },
+  "keywords": [],
+  "author": "Franco Doi",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@playwright/test": "^1.63.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^26.6.2",
+    "cross-env": "^10.1.0",
+    "dotenv": "^18.0.1"
+  }
+}
