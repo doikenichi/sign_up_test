@@ -1,23 +1,19 @@
-import { test as base } from "@playwright/test";
-import { DesktopNavigation } from "../../components/navigation/desktop-navigation.js";
-import { MobileNavigation } from "../../components/navigation/mobile-navigation.js";
-import type { Navigation } from "../../components/navigation/navigation.js";
+import { DesktopHeader } from "../../components/header/desktop-header.js";
+import type { Header } from "../../components/header/header.js";
+import { MobileHeader } from "../../components/header/mobile-header.js";
 import { getLocaleContent } from "../../locales/index.js";
 import type { LocaleContent } from "../../locales/types.js";
 import { SignUpPage } from "../../pages/signup.page.js";
-import type { TestOptions } from "./test-options.js";
+import { test as base } from "../test-fixture.js";
 
-export type FrameworkFixtures = {
+export type UIPages = {
 	content: LocaleContent;
-	navigation: Navigation;
-    signUpPage: SignUpPage;
+	navigation: Header;
+	signUpPage: SignUpPage;
 };
 
-export const test = base.extend<TestOptions & FrameworkFixtures>({
-    // Projects can override this through use.layout.
-    layout: ["desktop", { option: true }],
-
-    // Read the browser locale configured for the current test.
+export const test = base.extend<UIPages>({
+	// Read the browser locale configured for the current test.
 	content: async (
 		{ locale },
 		use: (content: LocaleContent) => Promise<void>,
@@ -25,26 +21,27 @@ export const test = base.extend<TestOptions & FrameworkFixtures>({
 		await use(getLocaleContent(locale));
 	},
 
-    // Provide the navigation implementation for the expected layout.
+	// Provide the header implementation for the expected layout.
 	navigation: async (
-		{ page, content, layout },
-		use: (navigation: Navigation) => Promise<void>,
+		{ page, content, isMobile },
+		use: (navigation: Header) => Promise<void>,
 	) => {
-		const navigation =
-			layout === "mobile"
-				? new MobileNavigation(page, content.navigation)
-				: new DesktopNavigation(page, content.navigation);
+		// small page factory: if mobile uses mobile header, so adapts all locators to mobile
+		// so will keep test same from users' action perspective: e.g., switch locale
+		const navigation = isMobile
+			? new MobileHeader(page, content.header)
+			: new DesktopHeader(page, content.header);
 
 		await use(navigation);
 	},
 
-    // Both layouts share this page object.
+	// Both layouts share this page object.
 	signUpPage: async (
-		{ page },
+		{ page, content },
 		use: (signUpPage: SignUpPage) => Promise<void>,
 	) => {
-		await use(new SignUpPage(page));
+		await use(new SignUpPage(page, content.signUp));
 	},
 });
 
-export { expect } from "@playwright/test";
+export { expect } from "../test-fixture.js";

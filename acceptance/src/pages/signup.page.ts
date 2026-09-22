@@ -1,9 +1,10 @@
 import {expect, type Locator, type Page} from "@playwright/test";
+import type {SignUpContent} from "../locales/types.js";
 
 export class SignUpPage {
     constructor(
         private readonly page: Page,
-        // private readonly content: SignUpContent,
+        private readonly content: SignUpContent,
     ) {
     }
 
@@ -31,6 +32,12 @@ export class SignUpPage {
 
     get phoneNumberInput(): Locator {
         return this.page.getByTestId("phoneInput");
+    }
+
+    get provinceOfPurchaseSelect(): Locator {
+        return this.page.getByRole("combobox", {
+            name: this.content.provinceOfPurchaseLabel,
+        });
     }
 
     get emailInput(): Locator {
@@ -77,6 +84,33 @@ export class SignUpPage {
         return this.page.getByTestId(
             "passwordConfirmation-error-message-typography",
         );
+    }
+
+    get requiredFormControls(): Locator {
+        return this.firstNameInput
+            .or(this.lastNameInput)
+            .or(this.phoneCountrySelect)
+            .or(this.phoneNumberInput)
+            .or(this.emailInput)
+            .or(this.passwordInput)
+            .or(this.passwordConfirmationInput)
+            .or(this.termsAndConditionsCheckbox);
+    }
+
+    get interactiveFormControls(): Locator {
+        return this.requiredFormControls
+            .or(this.provinceOfPurchaseSelect)
+            .or(this.createAccountButton);
+    }
+
+    get validationMessages(): Locator {
+        return this.page.locator('[id^="-error-message-typography"]');
+    }
+
+    get passwordComplexityTip(): Locator {
+        return this.page.getByText(this.content.passwordErrorComplexityTip, {
+            exact: true,
+        });
     }
 
     /**
@@ -145,7 +179,7 @@ export class SignUpPage {
      * Navigate to the signup page.
      */
     async goto(): Promise<void> {
-        await this.page.goto("/signup");
+        await this.page.goto(this.content.path);
 
         await this.expectToBeOnPage();
     }
@@ -154,6 +188,6 @@ export class SignUpPage {
      * Expect to be on the signup page.
      */
     async expectToBeOnPage(): Promise<void> {
-        await expect(this.page).toHaveURL("/signup");
+        await expect(this.page).toHaveURL(this.content.path);
     }
 }

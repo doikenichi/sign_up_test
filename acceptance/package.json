@@ -8,7 +8,10 @@
     "biome:ci": "biome ci .",
     "tsc": "npx tsc -p tsconfig.json --noEmit -w",
     "postinstall": "npx playwright install",
-    "test:e2e:dev": "cross-env ENV_FILE=env/.env.dev-en playwright test",
+    "test:desk:en": "cross-env ENV_FILE=env/.env.desk-en playwright test --headed",
+    "test:desk:fr": "cross-env ENV_FILE=env/.env.desk-fr playwright test --headed",
+    "test:mob:en": "cross-env ENV_FILE=env/.env.mobile-en playwright test --headed",
+    "test:mob:fr": "cross-env ENV_FILE=env/.env.mobile-fr playwright test --headed",
     "test:e2e:prod": "cross-env ENV_FILE=env/.env.prod-en playwright test"
   },
   "keywords": [],
@@ -16,10 +19,15 @@
   "type": "module",
   "devDependencies": {
     "@biomejs/biome": "2.5.14",
+    "@faker-js/faker": "^10.6.0",
     "@playwright/test": "^1.63.0",
     "@types/dotenv": "^6.1.1",
     "@types/node": "^26.6.2",
     "cross-env": "^10.1.0",
     "dotenv": "^18.0.1"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "winston": "^3.19.0"
   }
 }

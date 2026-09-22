@@ -1,9 +1,6 @@
 import { enCA } from "./en-CA.js";
 import { frCA } from "./fr-CA.js";
-import type {
-	LocaleContent,
-	SupportedLocale,
-} from "./types.js";
+import type { LocaleContent, SupportedLocale } from "./types.js";
 
 const locales = {
 	"en-CA": enCA,

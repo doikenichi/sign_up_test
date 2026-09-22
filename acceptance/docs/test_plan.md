@@ -1,57 +1,126 @@
-# UI testing
+# Test Plan
 
-## Accessibility
+## Introduction
 
-The goal of this section is to validate the deployed signup page's accessibility and usability, based on the rendered
-local page observed at <http://127.0.0.1:5500/local-site/capture/index.html>.
+This document defines the acceptance test coverage for Nesto's sign-up flow across supported locales and devices. It
+groups tests by risk area and identifies cases suitable for project-level or data-driven parametrization.
 
-### Accessibility checks
+### Test scope
 
-Verifies some common accessibility checks, defined by [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)
+Coverage includes page availability, `en-CA` and `fr-CA` content, desktop and mobile layouts, accessibility, client-side
+validation, submission behavior, duplicate handling, the account-creation API contract, and targeted security checks.
 
-- A11Y-01: Page loads with the heading "Create a nesto account" and a visible title for the form.
-- A11Y-02: All form controls have visible labels and usable text associations.
-- A11Y-03: The FR locale switcher is visible and clickable.
-- A11Y-04: The login link and external links (terms/privacy) remain keyboard accessible.
-- A11Y-05: The page can be navigated by keyboard in a logical order: first name, last name, phone country, phone number,
-  email, password, confirm password, checkbox, submit button.
-- A11Y-06: Focus styling is visible on interactive elements and the page does not trap focus.
-- A11Y-07: Run an automated accessibility scan and verify there are no critical or serious issues.
-- A11Y-08: Confirm form help text, validation messages, and required states remain readable and not color-only.
+### Out of scope
 
-## Locale
+Excluded areas are backend internals, email delivery, third-party services, unconfigured platforms, performance and load
+testing, full security assessment, production data cleanup, and post-registration account workflows.
 
-The locale test focuses on validating the signup flow in English and French.
-This tests has a version for mobile desktop and a version for Mobile since screen size and UX are different
+### Test execution strategy
 
-### Language switching
+Run from `acceptance` using `npm run test:desk:en`, `test:desk:fr`, `test:mob:en`, or `test:mob:fr`; each command loads
+its
+environment file and selects one Playwright project. CI uses one worker, two retries, an HTML report, and a trace on the
+first retry; passed retries require flaky-test review.
 
-This test suite focuses on language switching, links comparison for non-sign up form
+### Parametrized test approach
 
-- LOC-01: Select the FR language switch and confirm the page re-renders in French without losing form structure.
-- LOC-02: Validate the heading, labels, CTA, and helper text are translated correctly.
-- LOC-04: Switch back to English and confirm the original labels return without broken layout.
+Use Playwright projects for locale and device coverage, and data tables for field values, payloads, and expected
+results.
+Generated titles must include the test ID and case name; keep separate tests when workflows, side effects, or outcomes
+differ, and avoid irrelevant cross-product combinations.
 
-### Translation comparison
+---
 
-This test suite focuses on sign up form translation
+## Smoke tests
 
-- LOC-05: Compare the field names across locales: first name, last name, phone number, email, password, confirm
-  password.
-- LOC-06: Validate the password requirement copy and the create-account CTA are translated consistently.
-- LOC-07: Confirm all visible terms/privacy text is localized and not partially untranslated.
+### Objective
 
-### Links per locale
+Confirm that the sign-up page and account-creation endpoint are available before running the broader suite.
 
-- LOC-08: Validate the legal links route to the correct locale-specific policy or default policy pages.
-- LOC-09: Confirm the page does not generate broken links when switching between locales.
+### Scope
 
-### Page rendering
+Smoke coverage is limited to page load, form and localized heading visibility, and a controlled API validation response;
+detailed UI, validation, accessibility, and API checks remain in their respective suites.
+
+### Tests
+
+| ID       | Test                                                              | Expected result                                                                     | Parameters                    |
+|----------|-------------------------------------------------------------------|-------------------------------------------------------------------------------------|-------------------------------|
+| `SMK-01` | Open the sign-up route and verify the form and localized heading. | Page loads without error and expected content is visible.                           | All four Playwright projects. |
+| `SMK-02` | Send a safe payload with one required field omitted.              | API returns the documented validation status and error without creating an account. | Once per API environment.     |
+
+### Parametrization
+
+`SMK-01` runs through the four Playwright projects; `SMK-02` runs once per API environment with one fixed,
+non-identifying
+invalid payload. Additional invalid payloads belong in the API suite.
+
+---
+
+## UI testing
+
+### Objective
+
+Verify the sign-up flow across supported locales and devices, covering content, controls, validation, accessibility,
+responsive layout, and submission feedback; API contract validation remains in the API suite.
+
+### UI test coverage
+
+The UI suite covers accessibility, localized content and links, language switching, responsive rendering, client-side
+validation, and submission behavior, including request prevention for invalid forms and progression to the
+account-creation boundary for valid forms.
+
+### Accessibility
+
+Verify the sign-up form's semantics, accessible names and states, keyboard operation, focus behavior, validation
+feedback,
+and automated WCAG violations across the configured locale and device projects.
+
+#### Accessibility checks
+
+| ID        | Check                       | Expected result                                                                            |
+|-----------|-----------------------------|--------------------------------------------------------------------------------------------|
+| `A11Y-01` | Localized form heading      | The visible heading matches the locale fixture.                                            |
+| `A11Y-02` | Control names               | Every interactive form control has an accessible name.                                     |
+| `A11Y-03` | Required and invalid states | Required state is exposed, and invalid submission exposes field errors.                    |
+| `A11Y-04` | Keyboard operation          | Links, controls, and submission are keyboard operable.                                     |
+| `A11Y-05` | Focus behavior              | Focus is visible, ordered, and not trapped.                                                |
+| `A11Y-06` | Help and error content      | Guidance and errors are readable, associated with their controls, and not color-dependent. |
+| `A11Y-07` | Automated scan              | Axe reports no critical or serious violations.                                             |
+
+Run all cases through the four Playwright projects. `A11Y-07` uses `@axe-core/playwright`; targeted checks remain
+required
+for keyboard flow, focus visibility, labels, and error behavior that automated scanning cannot fully assess.
+
+### Locale
+
+Verify localized content, links, language switching, and layout in `en-CA` and `fr-CA` across the configured desktop and
+mobile projects.
+
+#### Language switching
+
+| ID       | Test                                                  | Expected result                                                            | Parameters                              |
+|----------|-------------------------------------------------------|----------------------------------------------------------------------------|-----------------------------------------|
+| `LOC-01` | Switch to the alternate locale from the sign-up page. | The target locale loads, key content updates, and the form remains usable. | `en-CA` to `fr-CA`; `fr-CA` to `en-CA`. |
+
+#### Translation comparison
+
+| ID       | Test                                                     | Expected result                                                                         | Parameters                                                                                                         |
+|----------|----------------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| `LOC-02` | Compare visible sign-up content with the locale fixture. | Each value matches the selected locale with no missing, mixed-locale, or fallback text. | Locale and content key: heading, field labels, password guidance, consent text, legal-link labels, and submit CTA. |
+
+#### Links per locale
+
+| ID | Test | Expected result | Parameters |
+|----|------|-----------------|------------|
+| `LOC-03` | Open each localized legal link from the sign-up page. | The link resolves without error to the expected locale-specific or approved default destination. | Locale and legal-link type. |
+
+#### Page rendering
 
 - LOC-10: Ensure no text overlaps, inputs disappear, or layout elements overlap after switching locale.
 - LOC-11: Validate the page remains visually intact at common desktop and mobile widths.
 
-## Form validations
+### Form validations
 
 The page contains the following visible fields:
 
@@ -65,9 +134,9 @@ The page contains the following visible fields:
 - Consent checkbox
 - Create your account button
 
-### Sunny scenario - all fields are valid
+#### Sunny scenario - all fields are valid
 
-This test suite focus on scenarios that user is created successfully - as designed by product and UX.
+This test suite focuses on scenarios that the account is created successfully.
 
 - FORM-01: Enter a valid first name, last name, valid Canadian phone number, valid email, password matching the length
   requirement, matching confirm password, and check the consent box.
@@ -76,31 +145,45 @@ This test suite focus on scenarios that user is created successfully - as design
 
 - FORM-02: Submit the form and confirm the page accepts the input without any validation errors and the submission path
   can proceed successfully.
-  checks the immediate validation result after submit
+  checks the immediate validation result after submitting
     - confirms the form passes business validation
     - confirms no validation errors are shown
     - confirms the submission proceeds
+    - confirms the response status is 201 and the response body contains the information
+      entered in the form
 
-### First name error scenarios
+#### First name error scenarios
 
 - FORM-04: Leave first name empty and submit; validation should fail.
 - FORM-05: Enter only spaces in first name and submit; validation should fail.
 - FORM-06: Enter a valid name with letters or common punctuation and confirm validation passes.
 
-### Last name error scenarios
+checks the immediate validation result after submitting
+
+- confirms that no request is done to the endpoint since this is a form validation error performed by the frontend.
+
+#### Last name error scenarios
 
 - FORM-07: Leave last name empty and submit; validation should fail.
 - FORM-08: Enter whitespace-only last name and submit; validation should fail.
 - FORM-09: Enter a valid last name and confirm validation passes.
 
-### Phone number error scenarios
+checks the immediate validation result after submitting
+
+- confirms that no request is done to the endpoint since this is a form validation error performed by the frontend.
+
+#### Phone number error scenarios
 
 - FORM-10: Leave the phone number empty and submit; validation should fail.
 - FORM-11: Enter an invalid phone format such as letters or too few digits; validation should fail.
 - FORM-12: Change the country selector to another locale and confirm the phone format rules update appropriately.
 - FORM-13: Enter a valid phone number for the selected country and confirm validation passes.
 
-### Email address error scenarios
+checks the immediate validation result after submitting
+
+- confirms that no request is done to the endpoint since this is a form validation error performed by the frontend.
+
+#### Email address error scenarios
 
 - FORM-14: Leave email empty and submit; validation should fail.
 - FORM-15: Enter an invalid email format and submit; validation should fail.
@@ -108,70 +191,123 @@ This test suite focus on scenarios that user is created successfully - as design
 - FORM-17: Attempt duplicate registration if the backend enforces uniqueness, and verify the correct error message
   appears.
 
-### Password error scenarios
+checks the immediate validation result after submitting
+
+- confirms that no request is done to the endpoint since this is a form validation error performed by the frontend.
+
+#### Password error scenarios
 
 - FORM-18: Leave password empty and submit; validation should fail.
 - FORM-19: Enter a password shorter than 12 characters; validation should fail.
 - FORM-20: Enter a password longer than 32 characters; validation should fail.
 - FORM-21: Enter a valid compliant password and confirm it passes validation.
 
-### Password Confirmation error scenarios
+checks the immediate validation result after submitting
+
+- confirms that no request is done to the endpoint since this is a form validation error performed by the frontend.
+
+#### Password Confirmation error scenarios
 
 - FORM-22: Leave confirm password empty while password is filled; validation should fail.
 - FORM-23: Enter a different value in confirm password; validation should fail.
 - FORM-24: Enter the same value as the password and confirm validation passes.
 
-## Idempotency test
+checks the immediate validation result after submitting
+
+- confirms that no request is done to the endpoint since this is a form validation error performed by the frontend.
+
+### Idempotency test
 
 - ID-01: Submit the same valid form twice in rapid succession and verify duplicate account creation is prevented.
 - ID-02: Double-click the create account button and confirm only one request is processed.
 - ID-03: Retry after a timeout or network interruption and confirm the app handles the second attempt safely.
 
-## Create your account button
+### Create your account button
 
 - CTA-01: Confirm the button label reads "Create your account" in English and the localized equivalent in French.
 - CTA-02: Validate the button remains visible and clickable across locale switching and viewport changes.
 - CTA-03: Confirm the button does not submit when required fields are incomplete.
 - CTA-04: Confirm the button submits successfully when all required validation passes.
 
-## checkbox uncheck
+### checkbox uncheck
 
 - CB-01: Leave the consent checkbox unchecked and attempt submission; validation should fail.
 - CB-02: Check the box and verify the form proceeds normally.
 - CB-03: Uncheck the box again after checking it and confirm the validation state updates correctly.
 
-## OWASP top 10
+### duplicated email registration
 
-### SQL Injection
+- first email is accepted and registration with same email is rejected.
+
+### OWASP top 10
+
+#### SQL Injection
 
 - OWASP-01: Attempt common SQL injection payloads in text inputs such as name and email fields.
 - OWASP-02: Verify the application rejects malicious payloads without returning stack traces or backend errors.
 
-### DDoS
+#### DDoS
 
 - OWASP-03: Submit repeated registration attempts in a short time to verify rate limiting or throttling.
 - OWASP-04: Test verification-email flooding by submitting multiple near-duplicate registrations and confirming the app
   restricts repeated sends.
 
-### IP whitelist
+#### IP whitelist
 
 - OWASP-05: Validate that a non-CA IP is blocked by the expected access control if the environment requires an
   allowlist.
 - OWASP-06: Validate that an allowed CA IP accesses the signup page without restrictions.
 
-# API testing
+---
 
-## Security
+## API testing
 
-### OWASP top 10
+### Sunny scenario - all fields are valid
+
+This test suite focuses on scenarios that the account is created successfully, and response status is 201 and the
+response body
+contains the information
+entered in the form.
+
+### Security
+
+#### OWASP top 10
 
 - API-01: Verify API endpoints reject malformed or malicious payloads safely.
 - API-02: Confirm error responses do not leak sensitive internals or stack traces.
 - API-03: Validate authentication and anti-CSRF behavior for the signup endpoint where applicable.
 
-### Swagger
+#### SQL Injection
 
-- API-04: Review the signup API contract and validate that documented request and response schemas match the UI
-  behavior.
-- API-05: Check that required/optional fields and error codes in the contract reflect the frontend validation rules.
-- API-06: Confirm the API documentation includes success and failure examples for account creation flows.
+- OWASP-01: Attempt common SQL injection payloads in text inputs such as name and email fields.
+- OWASP-02: Verify the application rejects malicious payloads without returning stack traces or backend errors.
+
+#### DDoS
+
+- OWASP-03: Submit repeated registration attempts in a short time to verify rate limiting or throttling.
+- OWASP-04: Test verification-email flooding by submitting multiple near-duplicate registrations and confirming the app
+  restricts repeated sends.
+
+#### IP whitelist
+
+- OWASP-05: Validate that a non-CA IP is blocked by the expected access control if the environment requires an
+  allowlist.
+- OWASP-06: Validate that an allowed CA IP accesses the signup page without restrictions.
+
+#### Swagger
+
+- Check if swagger documentation is not available in production.
+
+## Manual testing
+
+### Security
+
+Due to raising cybersecurity awareness, a common safety measure is blocking IPs that are not from the target audience;
+since the current domain is .ca, the target audience is Canada.
+This is because bad actors usually obscure their real IP and use public IPs from countries considered safer for them,
+which often means countries outside of Canada.
+For this reason, the signup page should block any IP address not from Canada as a cybersecurity measure.
+
+Although automating this isn't possible with my current resources, it would be feasible in a corporate environment.
+As a workaround, I manually tested this by setting up a VPN to another country from my machine and was able to load the
+page.
