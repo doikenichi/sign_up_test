@@ -69,8 +69,10 @@ export default defineConfig({
 	reporter: "html",
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
-		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-		trace: "on-first-retry",
+		/* Keep a trace for failed tests so their actions are available in the UI. */
+		trace: "retain-on-failure",
+		/* Take screenshots on failure */
+		screenshot: "only-on-failure",
 	},
 
 	/* Configure projects for major browsers */

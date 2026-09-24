@@ -1,15 +1,28 @@
-import type { Locator, Page } from "@playwright/test";
+import { expect, type Locator, type Page } from "@playwright/test";
+import type { Logger } from "winston";
 import type { HeaderContent } from "../../locales/types.js";
 import { type Header, loadNewLocale } from "./header.js";
+
+/**
+ * Mobile header is the Header component implementation for mobile layout.
+ * It implements the Header interface.
+ */
 
 export class MobileHeader implements Header {
 	constructor(
 		private readonly page: Page,
 		private content: HeaderContent,
-	) {}
+		private readonly logger: Logger,
+	) {
+		this.logger = logger.child({ component: "MobileHeader" });
+	}
 
-	get hamburguerMenu(): Locator {
+	get hamburgerMenuOpen(): Locator {
 		return this.page.getByTestId("open-burger-menu");
+	}
+
+	get hamburgerMenuClosed(): Locator {
+		return this.page.getByTestId("close-burger-menu");
 	}
 
 	get navBar(): Locator {
@@ -33,7 +46,7 @@ export class MobileHeader implements Header {
 	async currentLocale(): Promise<string> {
 		const isNavBarOpen = await this.isNavBarOpen();
 		if (!isNavBarOpen) {
-			await this.hamburguerMenu.click();
+			await this.hamburgerMenuOpen.click();
 		}
 
 		const currentLocale = await this.languageDropDown.textContent();
@@ -44,7 +57,7 @@ export class MobileHeader implements Header {
 
 		if (!isNavBarOpen) {
 			// close the nav bar if was previously closed (return to previous state)
-			await this.hamburguerMenu.click();
+			await this.hamburgerMenuClosed.click();
 		}
 		return locale;
 	}
@@ -63,35 +76,48 @@ export class MobileHeader implements Header {
 
 	/**
 	 * A simple helper function to convert a locale to an option selector.
-	 * @param currentLocale
+	 * @param targetLocale
 	 */
-	localeToOption(currentLocale: string): string {
-		switch (currentLocale) {
-			case "en-CA":
-				return "English";
-			case "fr-CA":
-				return "Français";
-			default:
-				throw new Error(`Unsupported locale: ${currentLocale}`);
-		}
+	localeToOption(targetLocale: string): string {
+		return targetLocale === "en-CA"
+			? this.content.navBarOptionEnglish
+			: this.content.navBarOptionFrench;
 	}
 
 	async switchLocale(): Promise<void> {
-		if (!(await this.isNavBarOpen())) {
-			await this.hamburguerMenu.click();
+		const isNavBarOpen = await this.isNavBarOpen();
+		if (!isNavBarOpen) {
+			await this.hamburgerMenuOpen.click();
 		}
 
 		const targetLocale = await this.getOppositeLocale(
 			await this.currentLocale(),
 		);
+		this.logger.info("Switching mobile locale", { targetLocale });
 
-		// click on the language drop down
-		await this.languageDropDown.click();
+		try {
+			// click on the language drop down
+			await this.languageDropDown.click();
 
-		await (
-			await this.languageOption(this.localeToOption(targetLocale))
-		).click();
+			await (
+				await this.languageOption(this.localeToOption(targetLocale))
+			).click();
 
-		this.content = loadNewLocale(await this.currentLocale());
+			this.content = loadNewLocale(targetLocale);
+			await expect(this.languageDropDown).toHaveText(
+				this.content.navBarLocale,
+				{
+					timeout: 15000,
+				},
+			);
+
+			if (!isNavBarOpen) {
+				// close the nav bar if was previously closed (return to previous state)
+				await this.hamburgerMenuClosed.click();
+			}
+		} catch (error) {
+			this.logger.error("Mobile locale switch failed", { targetLocale, error });
+			throw error;
+		}
 	}
 }

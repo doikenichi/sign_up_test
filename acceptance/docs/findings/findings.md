@@ -25,8 +25,22 @@ and there is no clear instruction on how the user could proceed.
    What is the `International` country code?
 
 
-4. inconsistent locale for phone number error
+4. inconsistent locale for phone number error text
    In English is "invalid value" and in French is "Valeur invalide."
    There is a dot "." at the end of the French string
 
+5. inconsistent locale for privacy policy text
+   In English is "Privacy Policy" and in French is "politique de confidentialité"
+   While in English is "Camel Case" in French is lowercase
 
+6. sign up flow returns access token with about 5 hours access
+   The user is authenticated with user and password by calling https://auth.nesto.ca/co/authenticate
+   The token should be valid for the session, there shouldn't be a need to generate new token.
+   I haven't checked the content of the jwt token, but I'm assuming that is same tenant
+   {
+   "client_id":"Fg4dnbZoCq7oA0rWplMLWnI1oE0HGy3l",
+   "username":"form02-chromium-en-fe6080ee-3062-4237-b8da-2558e37f45af@gmail.com",
+   "password":"Aa1wZs9qOfM6wDWFqT",
+   "realm":"Username-Password-Authentication-Qa",
+   "credential_type":"http://auth0.com/oauth/grant-type/password-realm"
+   }

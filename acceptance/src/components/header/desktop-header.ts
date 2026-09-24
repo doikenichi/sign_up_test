@@ -1,11 +1,21 @@
-import type { Locator, Page } from "@playwright/test";
-import type { Header } from "./header.js";
+import { expect, type Locator, type Page } from "@playwright/test";
+import type { Logger } from "winston";
+import type { HeaderContent } from "../../locales/types.js";
+import { type Header, loadNewLocale } from "./header.js";
+
+/**
+ * Desktop header is the Header component implementation for desktop layout.
+ * It implements the Header interface.
+ */
 
 export class DesktopHeader implements Header {
 	constructor(
 		private readonly page: Page,
-		// private content: HeaderContent,
-	) {}
+		private content: HeaderContent,
+		private readonly logger: Logger,
+	) {
+		this.logger = logger.child({ component: "DesktopHeader" });
+	}
 
 	get localeSwitch(): Locator {
 		return this.page.getByTestId("header-language-switch");
@@ -23,8 +33,23 @@ export class DesktopHeader implements Header {
 	}
 
 	async switchLocale(): Promise<void> {
-		await this.localeSwitch.click();
+		const targetLocale =
+			(await this.currentLocale()) === "en-CA" ? "fr-CA" : "en-CA";
+		this.logger.info("Switching desktop locale", { targetLocale });
 
-		// this.content = loadNewLocale(await this.currentLocale());
+		try {
+			await this.localeSwitch.click();
+
+			this.content = loadNewLocale(targetLocale);
+			await expect(this.localeSwitch).toHaveText(this.content.localeLink, {
+				timeout: 15000,
+			});
+		} catch (error) {
+			this.logger.error("Desktop locale switch failed", {
+				targetLocale,
+				error,
+			});
+			throw error;
+		}
 	}
 }
