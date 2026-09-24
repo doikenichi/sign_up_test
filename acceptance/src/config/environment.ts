@@ -32,32 +32,21 @@ export function loadEnvironment(): TestEnvironment {
 		}
 	}
 
-	const baseURL = process.env.UI_BASE_URL?.trim();
+	const baseURL = parseBaseURL(
+		process.env.UI_BASE_URL?.trim() ?? "",
+		"UI_BASE_URL",
+	);
 
-	if (!baseURL) {
-		throw new Error("UI_BASE_URL is required");
-	}
-
-	let parsedURL: URL;
-
-	try {
-		parsedURL = new URL(baseURL);
-	} catch {
-		throw new Error("UI_BASE_URL must be an absolute HTTP or HTTPS URL");
-	}
-
-	if (!["http:", "https:"].includes(parsedURL.protocol)) {
-		throw new Error("UI_BASE_URL must use HTTP or HTTPS");
-	}
-
-	if (!parsedURL.pathname.endsWith("/")) {
-		parsedURL.pathname += "/";
-	}
+	const apiBaseURL = parseBaseURL(
+		process.env.API_BASE_URL?.trim() ?? "",
+		"API_BASE_URL",
+	);
 
 	const projectName = process.env.TEST_PROJECT?.trim() || undefined;
 
 	environment = Object.freeze({
 		baseURL,
+		apiBaseURL,
 		projectName,
 		logging: loadLoggingConfig(),
 	});
@@ -86,6 +75,33 @@ function parseLogLevel(value: string): LogLevel {
 				`Invalid LOG_LEVEL "${value}". Expected error, warn, info, http, verbose, debug, or silly.`,
 			);
 	}
+}
+
+/**
+ * Parses the BASE_URL environment variable and returns a URL.
+ * @param value The value of the BASE_URL environment variable.
+ * @param variableName The name of the environment variable.
+ * @returns A URL.
+ * @throws An error if the BASE_URL value is invalid.
+ */
+function parseBaseURL(value: string, variableName: string): string {
+	let parsedURL: URL;
+
+	try {
+		parsedURL = new URL(value);
+	} catch {
+		throw new Error(`${variableName} must be an absolute HTTP or HTTPS URL`);
+	}
+
+	if (!["http:", "https:"].includes(parsedURL.protocol)) {
+		throw new Error(`${variableName} must use HTTP or HTTPS`);
+	}
+
+	if (!parsedURL.pathname.endsWith("/")) {
+		parsedURL.pathname += "/";
+	}
+
+	return parsedURL.toString();
 }
 
 /**

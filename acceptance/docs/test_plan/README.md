@@ -70,6 +70,9 @@ accessibility, and API checks remain in their respective suites.
 | `SMK-01` | Open the sign-up route and verify the form and localized heading. | The page loads, the form is visible, and the heading matches the selected locale fixture.           | All four Playwright projects.                                               |
 | `SMK-02` | Send a safe payload with one required field omitted.              | **Planned.** The API returns the documented validation status and error, and no account is created. | One run per API environment after the endpoint and contract are identified. |
 
+SMK-01 is mapped to A11Y-01
+SMK-03 is mapped to API-02
+
 ### Parametrization
 
 `SMK-01` is covered by the page and localization setup. `SMK-02` should use one fixed, non-identifying invalid payload
@@ -162,12 +165,12 @@ The form exposes these controls:
 
 #### Sunny scenario - all fields are valid
 
-| ID                                                                                                    | Test                                                                           | Expected result                                                                                                     | Parameters                    |
-|-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| ID                                                                                                      | Test                                                                       | Expected result                                                                                                     | Parameters                    |
+|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|-------------------------------|
 | [`SUNNY-01`](test_cases/ui/signup/form/sunny/sunny-01-populate-valid-fields-and-accept-consent.md)      | Populate every required field with valid data and accept consent.          | Values are accepted, applicable masks are applied, and no validation errors are shown.                              | All four Playwright projects. |
-| [`SUNNY-02`](test_cases/ui/signup/form/sunny/sunny-02-submit-valid-form-with-unique-email.md)           | Submit a valid form using a unique email address.                            | One request is sent, the API returns `201`, and the UI enters the expected success state without validation errors. | All four Playwright projects. |
-| [`SUNNY-03`](test_cases/ui/signup/form/sunny/sunny-03-detect-canada-from-international-phone-number.md) | Detect Canada from an international phone number.                            | The selector changes to Canada, the Canadian mask is applied, and the phone number passes validation.               | All four Playwright projects. |
-| [`SUNNY-04`](test_cases/ui/signup/form/sunny/sunny-04-populate-valid-fields-and-uncheck-accept.md)      | Populate every required field with valid data and leave consent unchecked.   | Values are accepted, applicable masks are applied, and no validation errors are shown.                              | All four Playwright projects. |
+| [`SUNNY-02`](test_cases/ui/signup/form/sunny/sunny-02-submit-valid-form-with-unique-email.md)           | Submit a valid form using a unique email address.                          | One request is sent, the API returns `201`, and the UI enters the expected success state without validation errors. | All four Playwright projects. |
+| [`SUNNY-03`](test_cases/ui/signup/form/sunny/sunny-03-detect-canada-from-international-phone-number.md) | Detect Canada from an international phone number.                          | The selector changes to Canada, the Canadian mask is applied, and the phone number passes validation.               | All four Playwright projects. |
+| [`SUNNY-04`](test_cases/ui/signup/form/sunny/sunny-04-populate-valid-fields-and-uncheck-accept.md)      | Populate every required field with valid data and leave consent unchecked. | Values are accepted, applicable masks are applied, and no validation errors are shown.                              | All four Playwright projects. |
 
 Use isolated, non-identifying data for each case. `SUNNY-01` stops before submission. `SUNNY-02` requires a unique email
 per execution and must not retain passwords, password confirmation, tokens, or cookies in evidence. The exact success
@@ -182,50 +185,56 @@ inspect the first-name validation result immediately. Invalid first-name values 
 creation endpoint. A valid first name must produce no first-name validation error; request behavior for a fully valid
 form is covered by `SUNNY-02`.
 
-| ID         | Scenario                                                                                                             | Expected result                                                                                       |
-|------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| [`FORM-04`](test_cases/ui/signup/form/validation/form-04-empty-first-name.md)  | Leave the first-name field empty and submit the form.                                                                | Submission is blocked, the required-field error is shown, and no account-creation request is sent.    |
-| [`FORM-05`](test_cases/ui/signup/form/validation/form-05-whitespace-first-name.md)  | Enter only whitespace in the first-name field and submit the form.                                                   | Whitespace is trimmed, the required-field error is shown, and no account-creation request is sent.    |
-| [`FORM-05A`](test_cases/ui/signup/form/validation/form-05a-invalid-character-in-first-name.md) | Enter a value containing a character outside the supported name character set, such as `@`, `_`, or `;`, and submit. | The invalid-name error is shown and no account-creation request is sent.                              |
-| [`FORM-05B`](test_cases/ui/signup/form/validation/form-05b-first-name-over-63-characters.md) | Enter more than 63 characters in the first-name field and submit the form.                                           | The length validation error is shown and no account-creation request is sent.                         |
-| [`FORM-06`](test_cases/ui/signup/form/validation/form-06-valid-first-name.md)  | Enter a valid first name using letters, spaces, apostrophes, periods, or hyphens, then submit.                       | No first-name validation error is shown, and the field value is accepted for the remaining form flow. |
+| ID                                                                                                             | Scenario                                                                                                             | Expected result                                                                                       |
+|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| [`FORM-04`](test_cases/ui/signup/form/validation/form-04-empty-first-name.md)                                  | Leave the first-name field empty and submit the form.                                                                | Submission is blocked, the required-field error is shown, and no account-creation request is sent.    |
+| [`FORM-05`](test_cases/ui/signup/form/validation/form-05-whitespace-first-name.md)                             | Enter only whitespace in the first-name field and submit the form.                                                   | Whitespace is trimmed, the required-field error is shown, and no account-creation request is sent.    |
+| [`FORM-05A`](test_cases/ui/signup/form/validation/form-05a-invalid-character-in-first-name.md)                 | Enter a value containing a character outside the supported name character set, such as `@`, `_`, or `;`, and submit. | The invalid-name error is shown and no account-creation request is sent.                              |
+| [`FORM-05B`](test_cases/ui/signup/form/validation/form-05b-first-name-over-63-characters.md)                   | Enter more than 63 characters in the first-name field and submit the form.                                           | The length validation error is shown and no account-creation request is sent.                         |
+| [`FORM-06`](test_cases/ui/signup/form/validation/form-06-valid-first-name.md)                                  | Enter a valid first name using letters, spaces, apostrophes, periods, or hyphens, then submit.                       | No first-name validation error is shown, and the field value is accepted for the remaining form flow. |
+| [`FORM-26`](test_cases/ui/signup/form/validation/first-name/form-26-unicode-first-name.md)                     | Enter a first name containing accented and non-Latin characters, then submit.                                        | The Unicode value is accepted without a first-name validation error.                                  |
+| [`FORM-27`](test_cases/ui/signup/form/validation/first-name/form-27-reject-control-character-in-first-name.md) | Enter a first name containing a control character and submit.                                                        | The invalid-name error is shown and no account-creation request is sent.                              |
 
 Run the cases in each configured locale and device project. Assert the localized error text where the locale fixtures
 define it: `The field is required` / `Ce champ est obligatoire.` for required errors and `Invalid name` / `Nom invalide`
-for invalid-name errors. The current acceptance suite exposes first-name locators and localized messages, but does not
-yet contain automated tests for these scenarios.
+for invalid-name errors. The Playwright first-name validation spec covers the listed FORM cases.
 
 #### Last-name validation scenarios
 
 For each case, complete the other required fields with valid test data, leave consent selected, submit the form, and
 inspect the last-name result immediately. Invalid values must block the account-creation request. Assert the localized
-required and invalid-name messages from the locale fixture. These cases are planned; no corresponding automated tests
-are present.
+required and invalid-name messages from the locale fixture. The Playwright last-name validation spec exercises the
+listed FORM cases.
 
-| ID        | Scenario                                                            | Expected result                                                            | Parameters                                 |
-|-----------|---------------------------------------------------------------------|----------------------------------------------------------------------------|--------------------------------------------|
-| [`FORM-07`](test_cases/ui/signup/form/validation/last-name/form-07-empty-last-name.md) | Leave last name empty and submit.                                   | The required error is shown and no account-creation request is sent.       | Four locale/device projects.               |
-| [`FORM-08`](test_cases/ui/signup/form/validation/last-name/form-08-whitespace-last-name.md) | Enter only whitespace in last name and submit.                      | The required error is shown and no account-creation request is sent.       | Four locale/device projects.               |
-| [`FORM-09`](test_cases/ui/signup/form/validation/last-name/form-09-invalid-character-in-last-name.md) | Enter a disallowed character, such as `@`, `_`, or `;`, and submit. | The invalid-name error is shown and no account-creation request is sent.   | Data-driven invalid values; four projects. |
-| [`FORM-10`](test_cases/ui/signup/form/validation/last-name/form-10-valid-last-name.md) | Enter a valid last name and submit the otherwise valid form.        | No last-name error is shown; request behavior follows the valid-form case. | Four locale/device projects.               |
+| ID                                                                                                           | Scenario                                                                     | Expected result                                                            | Parameters                                 |
+|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------|--------------------------------------------|
+| [`FORM-07`](test_cases/ui/signup/form/validation/last-name/form-07-empty-last-name.md)                       | Leave last name empty and submit.                                            | The required error is shown and no account-creation request is sent.       | Four locale/device projects.               |
+| [`FORM-08`](test_cases/ui/signup/form/validation/last-name/form-08-whitespace-last-name.md)                  | Enter only whitespace in last name and submit.                               | The required error is shown and no account-creation request is sent.       | Four locale/device projects.               |
+| [`FORM-09`](test_cases/ui/signup/form/validation/last-name/form-09-invalid-character-in-last-name.md)        | Enter a disallowed character, such as `@`, `_`, or `;`, and submit.          | The invalid-name error is shown and no account-creation request is sent.   | Data-driven invalid values; four projects. |
+| [`FORM-10`](test_cases/ui/signup/form/validation/last-name/form-10-valid-last-name.md)                       | Enter a valid last name and submit the otherwise valid form.                 | No last-name error is shown; request behavior follows the valid-form case. | Four locale/device projects.               |
+| [`FORM-28`](test_cases/ui/signup/form/validation/last-name/form-28-unicode-last-name.md)                     | Enter a last name containing accented and non-Latin characters, then submit. | The Unicode value is accepted without a last-name validation error.        | Four locale/device projects.               |
+| [`FORM-29`](test_cases/ui/signup/form/validation/last-name/form-29-reject-control-character-in-last-name.md) | Enter a last name containing a control character and submit.                 | The invalid-name error is shown and no account-creation request is sent.   | Four locale/device projects.               |
+
+Run the cases in each configured locale and device project. The Playwright last-name validation spec covers the listed
+FORM cases.
 
 #### Phone-number validation scenarios
 
 The country selector and phone value are one validation concern. Confirm the supported country set and exact invalid
 messages before automating cases outside the currently evidenced Canadian flow.
 
-| ID        | Scenario                                                                    | Expected result                                                                      | Parameters                                                                                |
-|-----------|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [`FORM-11`](test_cases/ui/signup/form/validation/phone-number/form-11-empty-phone-number.md) | Leave the phone number empty and submit.                                    | The phone required/invalid result is shown and no account-creation request is sent.  | Four locale/device projects; exact required message needs confirmation.                   |
-| [`FORM-12`](test_cases/ui/signup/form/validation/phone-number/form-12-invalid-phone-number.md) | Enter a phone value with letters, too few digits, or too many digits.       | The phone validation error is shown and no account-creation request is sent.         | Data-driven invalid values; supported country must be confirmed.                          |
-| [`FORM-13`](test_cases/ui/signup/form/validation/phone-number/form-13-valid-phone-number-for-supported-country.md) | Select another supported country and enter a valid number for that country. | The country-specific format is applied and no phone validation error is shown.       | Supported country and format are evidence gaps; do not assume Brazil.                     |
-| [`FORM-14`](test_cases/ui/signup/form/validation/phone-number/form-14-valid-canadian-phone-number.md) | Enter a valid Canadian number after selecting Canada.                       | The confirmed `(###) ###-####` mask is shown and no phone validation error is shown. | Four locale/device projects; overlaps with `SUNNY-01` and `SUNNY-03` and should share data. |
+| ID                                                                                                                 | Scenario                                                                    | Expected result                                                                      | Parameters                                                                                  |
+|--------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| [`FORM-11`](test_cases/ui/signup/form/validation/phone-number/form-11-empty-phone-number.md)                       | Leave the phone number empty and submit.                                    | The phone required/invalid result is shown and no account-creation request is sent.  | Four locale/device projects; exact required message needs confirmation.                     |
+| [`FORM-12`](test_cases/ui/signup/form/validation/phone-number/form-12-invalid-phone-number.md)                     | Enter a phone value with letters, too few digits, or too many digits.       | The phone validation error is shown and no account-creation request is sent.         | Data-driven invalid values; supported country must be confirmed.                            |
+| [`FORM-13`](test_cases/ui/signup/form/validation/phone-number/form-13-valid-phone-number-for-supported-country.md) | Select another supported country and enter a valid number for that country. | The country-specific format is applied and no phone validation error is shown.       | Supported country and format are evidence gaps; do not assume Brazil.                       |
+| [`FORM-14`](test_cases/ui/signup/form/validation/phone-number/form-14-valid-canadian-phone-number.md)              | Enter a valid Canadian number after selecting Canada.                       | The confirmed `(###) ###-####` mask is shown and no phone validation error is shown. | Four locale/device projects; overlaps with `SUNNY-01` and `SUNNY-03` and should share data. |
 
 #### Email-address validation scenarios
 
-| ID        | Scenario                                                          | Expected result                                                                   | Parameters                                                              |
-|-----------|-------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| [`FORM-15`](test_cases/ui/signup/form/validation/email-address/form-15-empty-email.md) | Leave email empty and submit.                                     | The email validation error is shown and no account-creation request is sent.      | Four locale/device projects; exact required message needs confirmation. |
+| ID                                                                                              | Scenario                                                          | Expected result                                                                   | Parameters                                                              |
+|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| [`FORM-15`](test_cases/ui/signup/form/validation/email-address/form-15-empty-email.md)          | Leave email empty and submit.                                     | The email validation error is shown and no account-creation request is sent.      | Four locale/device projects; exact required message needs confirmation. |
 | [`FORM-16`](test_cases/ui/signup/form/validation/email-address/form-16-invalid-email-format.md) | Enter an invalid email format and submit.                         | The localized email error is shown and no account-creation request is sent.       | Data-driven invalid formats; four projects.                             |
 | [`FORM-17`](test_cases/ui/signup/form/validation/email-address/form-17-valid-isolated-email.md) | Enter a valid, isolated email address in an otherwise valid form. | No email validation error is shown; request behavior follows the valid-form case. | Unique synthetic addresses; four projects.                              |
 
@@ -234,53 +243,76 @@ messages before automating cases outside the currently evidenced Canadian flow.
 Use the password rules represented by the locale fixtures: 12–32 characters, with at least one uppercase letter, one
 lowercase letter, and one number. Confirm whether the lower and upper bounds are inclusive before implementation.
 
-| ID        | Scenario                                                               | Expected result                                                                 | Parameters                                                              |
-|-----------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| [`FORM-18`](test_cases/ui/signup/form/validation/password/form-18-empty-password.md) | Leave password empty and submit.                                       | The password validation error is shown and no account-creation request is sent. | Four locale/device projects; exact required message needs confirmation. |
-| [`FORM-19`](test_cases/ui/signup/form/validation/password/form-19-password-below-minimum-length.md) | Enter a password below the minimum length.                             | The minimum-length error is shown and no account-creation request is sent.      | Boundary value below 12; four projects.                                 |
-| [`FORM-20`](test_cases/ui/signup/form/validation/password/form-20-password-above-maximum-length.md) | Enter a password above the maximum length.                             | The length error is shown and no account-creation request is sent.              | Boundary value above 32; four projects.                                 |
+| ID                                                                                                     | Scenario                                                               | Expected result                                                                 | Parameters                                                              |
+|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| [`FORM-18`](test_cases/ui/signup/form/validation/password/form-18-empty-password.md)                   | Leave password empty and submit.                                       | The password validation error is shown and no account-creation request is sent. | Four locale/device projects; exact required message needs confirmation. |
+| [`FORM-19`](test_cases/ui/signup/form/validation/password/form-19-password-below-minimum-length.md)    | Enter a password below the minimum length.                             | The minimum-length error is shown and no account-creation request is sent.      | Boundary value below 12; four projects.                                 |
+| [`FORM-20`](test_cases/ui/signup/form/validation/password/form-20-password-above-maximum-length.md)    | Enter a password above the maximum length.                             | The length error is shown and no account-creation request is sent.              | Boundary value above 32; four projects.                                 |
 | [`FORM-21`](test_cases/ui/signup/form/validation/password/form-21-password-missing-character-class.md) | Enter a 12–32 character password missing one required character class. | The complexity error is shown and no account-creation request is sent.          | Data-driven missing uppercase, lowercase, and number; four projects.    |
-| [`FORM-22`](test_cases/ui/signup/form/validation/password/form-22-compliant-password.md) | Enter a compliant password and matching confirmation.                  | No password error is shown; request behavior follows the valid-form case.       | Boundary and representative valid values; do not retain secrets.        |
+| [`FORM-22`](test_cases/ui/signup/form/validation/password/form-22-compliant-password.md)               | Enter a compliant password and matching confirmation.                  | No password error is shown; request behavior follows the valid-form case.       | Boundary and representative valid values; do not retain secrets.        |
 
 #### Password-confirmation validation scenarios
 
-| ID        | Scenario                                                | Expected result                                                               | Parameters                                          |
-|-----------|---------------------------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------|
-| [`FORM-23`](test_cases/ui/signup/form/validation/password-confirmation/form-23-empty-password-confirmation.md) | Leave confirmation empty while password is valid.       | The confirmation error is shown and no account-creation request is sent.      | Four locale/device projects.                        |
+| ID                                                                                                                  | Scenario                                                | Expected result                                                               | Parameters                                          |
+|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------|
+| [`FORM-23`](test_cases/ui/signup/form/validation/password-confirmation/form-23-empty-password-confirmation.md)      | Leave confirmation empty while password is valid.       | The confirmation error is shown and no account-creation request is sent.      | Four locale/device projects.                        |
 | [`FORM-24`](test_cases/ui/signup/form/validation/password-confirmation/form-24-mismatched-password-confirmation.md) | Enter a value different from the password.              | The mismatch error is shown and no account-creation request is sent.          | Data-driven mismatch values; four projects.         |
-| [`FORM-25`](test_cases/ui/signup/form/validation/password-confirmation/form-25-matching-password-confirmation.md) | Enter the same compliant value in both password fields. | No confirmation error is shown; request behavior follows the valid-form case. | Four locale/device projects; do not retain secrets. |
+| [`FORM-25`](test_cases/ui/signup/form/validation/password-confirmation/form-25-matching-password-confirmation.md)   | Enter the same compliant value in both password fields. | No confirmation error is shown; request behavior follows the valid-form case. | Four locale/device projects; do not retain secrets. |
 
 For `FORM-04` through `FORM-25`, assert the immediate field result and verify that no account-creation request is sent.
 
 ### Submission
 
-| ID       | Scenario                                                              | Expected result                                                                                                          | Parameters                                                                  |
-|----------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| ID                                                                                                        | Scenario                                                                                                                  | Expected result                                                                                                                                                                                               | Parameters                                                                                                                                                                 |
+|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [`SUBM-01`](test_cases/ui/signup/submission/subm-01-prevent-repeated-submission-while-request-pending.md) | With a valid form, activate **Create your account** repeatedly while the first account-creation request is still pending. | Exactly one account-creation request is sent and at most one account is created. Confirm whether the button must become disabled while the request is pending before treating that UI state as a requirement. | Valid data with an isolated, unused email; hold the request pending to allow repeated activation; run in each of the four locale/device projects if coverage is confirmed. |
 
-Count only requests to the account-creation endpoint; exclude unrelated traffic and any preflight request. This covers repeated activation during one in-flight submission. `DUP-01` covers a separate, completed registration followed by another completed attempt with the same email, and depends on the backend duplicate-email contract. A linked detailed case can be added when the pending-request setup and required button behavior are confirmed.
+Count only requests to the account-creation endpoint; exclude unrelated traffic and any preflight request. This covers
+repeated activation during one in-flight submission. `DUP-01` covers a separate, completed registration followed by
+another completed attempt with the same email, and depends on the backend duplicate-email contract. A linked detailed
+case can be added when the pending-request setup and required button behavior are confirmed.
 
-On controlled environment, this test case would be complemented with database validation, but there is no such access on production.
+On controlled environment, this test case would be complemented with database validation, but there is no such access on
+production.
 
 ### Duplicate-email registration
 
-| ID       | Scenario                                                                                       | Expected result                                                                                              | Parameters                                                                          |
-|----------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| ID                                                                                                    | Scenario                                                                                       | Expected result                                                                                              | Parameters                                                                          |
+|-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | [`DUP-01`](test_cases/ui/signup/duplicate-email/dup-01-reject-second-registration-with-same-email.md) | Create an account with an isolated email, then submit a second valid form with the same email. | The second attempt is rejected with the documented duplicate-email result, and no second account is created. | Requires backend uniqueness, a safe test environment, and the exact status/message. |
 
-This case is separate from rapid duplicate submission: it uses two completed registration attempts and has a different side effect and contract.
-On controlled environment, this test case would be complemented with database validation, but there is no such access on production.
+This case is separate from rapid duplicate submission: it uses two completed registration attempts and has a different
+side effect and contract.
+On controlled environment, this test case would be complemented with database validation, but there is no such access on
+production.
 
 ### Targeted security checks
 
-These are risk-based checks, not an OWASP Top 10 assessment.
+Based on [OWASP Smart Contract Top 10](https://scs.owasp.org/sctop10/)
+The existing UI validation tests cover some of the checks below. This coverage confirms client-side behavior only; it
+does not establish server-side enforcement.
 
-| ID       | Check                                                          | Expected result                                                                                                    | Prerequisite                                                                        |
-|----------|----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| [`SEC-01`](test_cases/ui/targeted-security-checks/sec-01-handle-injection-payloads-safely.md) | Submit representative injection payloads in text fields.       | The application handles them safely without unintended account creation, stack traces, or sensitive error details. | Approved payloads and endpoint contract.                                            |
-| [`SEC-02`](test_cases/ui/targeted-security-checks/sec-02-check-controlled-rate-limiting.md) | Repeat registration attempts at a controlled rate.             | Any required throttling or rate-limit behavior matches the security requirement.                                   | Confirmed rate-limit requirement and safe test window.                              |
-| [`SEC-03`](test_cases/ui/targeted-security-checks/sec-03-check-near-duplicate-registration-effects.md) | Submit repeated near-duplicate registrations.                  | Email side effects and duplicate handling match the confirmed requirement.                                         | Email test environment or an explicit exclusion.                                    |
-| [`SEC-04`](test_cases/ui/targeted-security-checks/sec-04-check-network-origin-policy.md) | Test access from an allowed and a disallowed network location. | Access behavior matches a documented network policy.                                                               | Documented policy and controlled network locations; no Canada-only rule is assumed. |
+The signup form visibly contains fields for first name, last name, phone, email, password, password confirmation, and a
+consent checkbox. The page displays this password policy: 12–32 characters, including at least one uppercase letter, one
+lowercase letter, and one number. The page code references client-side form validation and field-level error handling.
+
+This inspection did not submit the form or create an account. Client-side validation behavior and server-side
+enforcement have not been verified. The cases below are recommended automation coverage, not confirmed vulnerabilities.
+
+| ID       | UI mapping                                                                                                                      | API mapping        | Scenario                                                 | Expected result                                                                                                                              | Parameters                                                                                                                                                                    |
+|----------|---------------------------------------------------------------------------------------------------------------------------------|--------------------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `SEC-01` | `A11Y-03`, `FORM-04`, `FORM-07`, `FORM-11`, `FORM-15`, `FORM-18`, `FORM-23`                                                     | `API-02`           | Required fields and empty submission (P0).               | **MISSING API COVERAGE:** all-fields-empty and individually omitted-field API checks must reject the request and create no account.          | Include every required field and unchecked consent; verify each required field omission individually.                                                                         |
+| `SEC-02` | `FORM-15`, `FORM-16`                                                                                                            | `API-02`, `API-03` | Email syntax and whitespace (P0).                        | Verify malformed and whitespace values are rejected server-side and invalid input creates no account.                                        | Try `name`, `name@`, `@example.com`, `name@example`, leading/trailing whitespace, and embedded whitespace; confirm trimming rules and server-side rejection.                  |
+| `SEC-03` | `FORM-19`–`FORM-22`                                                                                                             | `API-02`           | Password policy and length boundaries (P0).              | Verify server-side enforcement and agreement with the displayed policy.                                                                      | Check lengths 11, 12, 32, and 33; omit uppercase, lowercase, and numeric characters one at a time.                                                                            |
+| `SEC-04` | `FORM-23`–`FORM-25` (UI doesn't submit mismattech passwords)                                                                    | `API-02`           | Password confirmation (P0).                              | If the endpoint accepts confirmation, verify it rejects a mismatch. Rechecking after the password changes is UI coverage.                    | Use values differing by one character; repeat after changing the password in the UI.                                                                                          |
+| `SEC-05` | `FORM-11`–`FORM-14` (UI doesn't send incomplete or invalid phone numbers)                                                       | `API-02`           | Phone number and country selection (P1).                 | Verify server rejection for invalid/incomplete numbers and confirmed country rules; country-change behavior is UI-only.                      | Include incomplete and country-incompatible numbers; change country after entry; check letters and unsupported punctuation.                                                   |
+| `SEC-06` | `FORM-04`–`FORM-10`, `FORM-26`–`FORM-29` (UI doesn't send invalid values; trimming and full length boundaries remain uncovered) | `API-02`, `API-03` | Name trimming, length, and character handling (P1).      | Verify trimming, limits, Unicode names, and control characters server-side.                                                                  | Check leading/trailing spaces and values at and beyond documented limits; include representative accented and non-Latin names.                                                |
+| `SEC-07` | `FORM-19`, `FORM-20`, `FORM-05B` (UI doesn't off boundaries names and password)                                                 | `API-02`, `API-03` | Boundary lengths and oversized values (P1).              | Verify remaining field boundaries and oversized payload handling without errors or unexpected truncation.                                    | Cover email, first name, last name, and phone; use documented minimum/maximum and adjacent values; test oversized values through UI and API.                                  |
+| `SEC-08` | —                                                                                                                               | `API-02`           | Server-side validation with client checks bypassed (P0). | The mapped case is planned only; the server must reject invalid requests and create no account when browser validation is bypassed.          | Use synthetic data in the test environment; include invalid email/phone, weak or oversized password, mismatched confirmation if accepted, missing names, and missing consent. |
+| `SEC-09` | —                                                                                                                               | `API-03`           | Malformed or hostile input and safe failure (P1).        | Verify rejection or safe handling, no reflected executable content or sensitive error details, and no partial account or inconsistent state. | Send unexpected JSON types, nulls, control characters, and representative script/markup strings in text fields.                                                               |
+
+Security-relevant Playwright UI tests carry the `@security` tag and the corresponding `@SEC-*` scenario tags. Use
+Playwright tag filtering to select the targeted security checks.
 
 ---
 
@@ -291,23 +323,30 @@ These are risk-based checks, not an OWASP Top 10 assessment.
 The API suite should verify the account-creation contract independently of page rendering. At present, the repository
 contains no API request fixture, endpoint definition, or API test that establishes the endpoint, request schema,
 response
-schema, or success status. `SUNNY-02` records an expected `201` response, but that expectation remains a contract item to
+schema, or success status. `SUNNY-02` records an expected `201` response, but that expectation remains a contract item
+to
 confirm before it is treated as evidence.
 
 ### Contract and negative testing
 
 Add API cases only after the endpoint and contract are identified:
 
-| ID       | Check                                   | Expected result                                                                           |
-|----------|-----------------------------------------|-------------------------------------------------------------------------------------------|
-| [`API-01`](test_cases/api/contract-and-negative-testing/api-01-submit-valid-contract-payload.md) | Submit a valid contract payload.        | The documented success status and response schema are returned; secrets are not returned. |
-| [`API-02`](test_cases/api/contract-and-negative-testing/api-02-reject-missing-or-invalid-required-field.md) | Omit or invalidate one required field.  | The documented client-error status and field error are returned; no account is created.   |
-| [`API-03`](test_cases/api/contract-and-negative-testing/api-03-reject-malformed-or-unsupported-values.md) | Submit malformed or unsupported values. | The API rejects the payload without stack traces or sensitive implementation details.     |
-| [`API-04`](test_cases/api/contract-and-negative-testing/api-04-handle-duplicate-email.md) | Submit a duplicate email.               | The documented duplicate result is returned if uniqueness is enforced.                    |
+| ID                                                                                                          | Scenario                                                       | Expected result                                                                                                  | Parameters |
+|-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|------------|
+| [`API-01`](test_cases/api/contract-and-negative-testing/api-01-submit-valid-contract-payload.md)            | Submit a valid contract payload.                               | The documented success status and response schema are returned; secrets are not returned.                        |
+| [`API-02`](test_cases/api/contract-and-negative-testing/api-02-reject-missing-or-invalid-required-field.md) | Submit an empty payload or omit/invalidate one required field. | The documented client-error status and field error are returned; no account is created.                          |
+| [`API-03`](test_cases/api/contract-and-negative-testing/api-03-reject-malformed-or-unsupported-values.md)   | Submit malformed, oversized, or unsupported values.            | The API rejects the payload without stack traces or sensitive implementation details, and no account is created. |
 
-The endpoint, field names, statuses, authentication or anti-CSRF requirements, and response schema are evidence gaps.
-Do not add claims about Swagger availability, IP allowlists, rate limiting, email flooding, or security controls until
-the product requirement and test environment are documented.
+Parameterize `API-02` with missing consent; malformed or whitespace email; password lengths 11 and 33 and missing
+character classes; mismatched confirmation if the endpoint accepts it; invalid, incomplete, or country-incompatible
+phone values; name trimming, Unicode and control-character cases; and documented minimum/maximum field lengths with
+adjacent and oversized values. Send one invalid field per request, plus an empty payload. Assert the documented client
+error and verify that no account is created for each variation.
+
+Parameterize `API-03` with unexpected JSON types, `null` values, control characters, representative script/markup
+strings, and oversized payloads. Verify safe rejection, no reflected executable content or sensitive details, and no
+partial account or inconsistent signup state. Keep country-change recalculation in UI tests. Include confirmation
+mismatch in API coverage only if the endpoint accepts a confirmation field.
 
 ## Manual testing
 

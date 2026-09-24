@@ -27,10 +27,9 @@ test.describe("Accessibility checks", () => {
 	});
 
 	// The heading is the primary-localized landmark for the sign-up form.
-	test("A11Y-01: exposes the localized form heading", async ({
-		content,
-		signUpPage,
-	}) => {
+	test("A11Y-01: exposes the localized form heading", {
+		tag: ["@smoke"],
+	}, async ({ content, signUpPage }) => {
 		// Arrange - beforeach
 		// Assert
 		await expect(signUpPage.formHeader).toBeVisible();
@@ -54,9 +53,9 @@ test.describe("Accessibility checks", () => {
 	});
 
 	// Required state is checked before submission; validation messages are checked after it.
-	test("A11Y-03: exposes required and invalid states", async ({
-		signUpPage,
-	}) => {
+	test("A11Y-03: exposes required and invalid states", {
+		tag: ["@security", "@SEC-01"],
+	}, async ({ signUpPage }) => {
 		// Arrange - beforeach
 		const requiredControls = signUpPage.requiredFormControls;
 

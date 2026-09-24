@@ -20,6 +20,7 @@ export type LoggingConfig =
 
 export type TestEnvironment = Readonly<{
 	baseURL: string;
+	apiBaseURL: string;
 	projectName?: string;
 	logging: LoggingConfig;
 }>;

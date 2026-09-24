@@ -9,6 +9,7 @@ const projects = [
 	// chromium as default browser for desktop
 	{
 		name: "chromium-en",
+		testIgnore: "**/api/**/*.spec.ts",
 		use: {
 			...devices["Desktop Chrome"],
 			locale: "en-CA",
@@ -17,6 +18,7 @@ const projects = [
 	},
 	{
 		name: "chromium-fr",
+		testIgnore: "**/api/**/*.spec.ts",
 		use: {
 			...devices["Desktop Chrome"],
 			locale: "fr-CA",
@@ -27,6 +29,7 @@ const projects = [
 	// mobile model has no deeper reasoning
 	{
 		name: "mobile-en",
+		testIgnore: "**/api/**/*.spec.ts",
 		use: {
 			...devices["iPhone 16 Pro"],
 			locale: "en-CA",
@@ -35,10 +38,18 @@ const projects = [
 	},
 	{
 		name: "mobile-fr",
+		testIgnore: "**/api/**/*.spec.ts",
 		use: {
 			...devices["iPhone 16 Pro"],
 			locale: "fr-CA",
 			baseURL: environment.baseURL,
+		},
+	},
+	{
+		name: "api",
+		testMatch: "**/api/**/*.spec.ts",
+		use: {
+			baseURL: environment.apiBaseURL,
 		},
 	},
 ];
@@ -66,7 +77,11 @@ export default defineConfig({
 	/* Opt out of parallel tests on CI. */
 	workers: process.env.CI ? 1 : undefined,
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
-	reporter: "html",
+	// reporter: "html",
+	reporter: [
+		["list", { printFailuresInline: true }],
+		["json", { outputFile: "test-results/results.json" }],
+	],
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		/* Keep a trace for failed tests so their actions are available in the UI. */

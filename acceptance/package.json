@@ -11,7 +11,13 @@
     "test:desk:en": "cross-env ENV_FILE=env/.env.desk-en playwright test --ui",
     "test:desk:fr": "cross-env ENV_FILE=env/.env.desk-fr playwright test --ui",
     "test:mob:en": "cross-env ENV_FILE=env/.env.mobile-en playwright test --ui",
-    "test:mob:fr": "cross-env ENV_FILE=env/.env.mobile-fr playwright test --ui"
+    "test:mob:fr": "cross-env ENV_FILE=env/.env.mobile-fr playwright test --ui",
+    "test:ui": "npm run test:desk:en && npm run test:desk:fr && npm run test:mob:en && npm run test:mob:fr",
+    "test:smoke:en": "cross-env ENV_FILE=env/.env.desk-en playwright test --grep @smoke",
+    "test:smoke:fr": "cross-env ENV_FILE=env/.env.desk-fr playwright test --grep @smoke",
+    "test:smoke": "npm run test:smoke:en && npm run test:smoke:fr",
+    "test:security": "cross-env ENV_FILE=env/.env.desk-en playwright test --grep @security",
+    "test:api": "cross-env ENV_FILE=env/.env.api playwright test --ui"
   },
   "keywords": [],
   "author": "Franco Doi",
