@@ -1,0 +1,658 @@
+{
+  "generatedAt": "2026-09-24T08:33:49.982Z",
+  "report": "test-results/results.json",
+  "evidenceDirectory": ".playwright-work/evidence/2026-09-24T08-33-49-930Z",
+  "unexpectedFailureCount": 6,
+  "flakyTestCount": 0,
+  "tests": [
+    {
+      "title": "A11Y-03: exposes required and invalid states",
+      "project": "chromium-fr",
+      "file": "ui/signup/accessibility.spec.ts",
+      "line": 56,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 2933,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\accessibility.spec.ts",
+                "column": 23,
+                "line": 69
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 67 |\u001b[39m \t\t\t\t(\u001b[36mawait\u001b[39m control\u001b[33m.\u001b[39mgetAttribute(\u001b[32m\"aria-required\"\u001b[39m)) \u001b[33m===\u001b[39m \u001b[32m\"true\"\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 68 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 69 |\u001b[39m \t\t\texpect(isRequired)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t\t\t                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 70 |\u001b[39m \t\t})\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m\n \u001b[90m 72 |\u001b[39m \t\t\u001b[90m// Act\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\accessibility.spec.ts:69:23\u001b[22m\n\u001b[2m    at expectEvery (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\accessibility.spec.ts:18:3)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\accessibility.spec.ts:64:3\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-001/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-001/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-001/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-001/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-001/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-001/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-5e570-required-and-invalid-states-chromium-fr\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-001/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "A11Y-06: exposes readable validation and help text",
+      "project": "chromium-fr",
+      "file": "ui/signup/accessibility.spec.ts",
+      "line": 120,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 3316,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\accessibility.spec.ts",
+                "column": 29,
+                "line": 16
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n\u001b[0m \u001b[90m 14 |\u001b[39m \t\u001b[36mconst\u001b[39m controlList \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m controls\u001b[33m.\u001b[39mall()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m \texpect(controlList\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m control \u001b[36mof\u001b[39m controlList) {\n \u001b[90m 18 |\u001b[39m \t\t\u001b[36mawait\u001b[39m assertion(control)\u001b[33m;\u001b[39m\n \u001b[90m 19 |\u001b[39m \t}\u001b[0m\n\u001b[2m    at expectEvery (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\accessibility.spec.ts:16:29)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\accessibility.spec.ts:130:3\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-002/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-002/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-002/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-002/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-002/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-002/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-accessibility-Ac-4af42-le-validation-and-help-text-chromium-fr\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-002/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "SUNNY-03: detects Canada from an international phone number",
+      "project": "chromium-fr",
+      "file": "ui/signup/form-happy-path.spec.ts",
+      "line": 105,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 7901,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\form-happy-path.spec.ts",
+                "column": 51,
+                "line": 119
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('phoneInput')\nExpected: \u001b[32m\"\u001b[7m(\u001b[27m416\u001b[7m)\u001b[27m 555\u001b[7m-\u001b[27m0133\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m+1 \u001b[27m416 555\u001b[7m \u001b[27m0133\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" getByTestId('phoneInput') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('phoneInput')\u001b[22m\n\u001b[2m    14 × locator resolved to <input type=\"tel\" id=\"field-6\" name=\"phone\" autocomplete=\"tel\" placeholder=\"Téléphone\" value=\"+[redacted-phone]\" data-testid=\"phoneInput\" aria-labelledby=\"form-placeholder-field-6\" class=\"_input__field_w8g1t_167 _input__field--has-placeholder_w8g1t_1 PhoneInputInput\"/>\u001b[22m\n\u001b[2m       - unexpected value \"+[redacted-phone]\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 117 |\u001b[39m         \u001b[36mawait\u001b[39m signUpPage\u001b[33m.\u001b[39mphoneNumberInput\u001b[33m.\u001b[39mfill(\u001b[32m`+1${nationalNumber}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 118 |\u001b[39m         \u001b[36mawait\u001b[39m expect(signUpPage\u001b[33m.\u001b[39mphoneCountrySelect)\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m\"CA\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 119 |\u001b[39m         \u001b[36mawait\u001b[39m expect(signUpPage\u001b[33m.\u001b[39mphoneNumberInput)\u001b[33m.\u001b[39mtoHaveValue(\u001b[32m\"([redacted-phone]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 120 |\u001b[39m\n \u001b[90m 121 |\u001b[39m         \u001b[90m// Trigger the phone field's blur validation without moving the viewport\u001b[39m\n \u001b[90m 122 |\u001b[39m         \u001b[90m// to the lower email field.\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\form-happy-path.spec.ts:119:51\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-003/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-003/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-003/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-003/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-003/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-003/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-form-happy-path--8c46d--international-phone-number-chromium-fr\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-003/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "FORM-26: handles Unicode characters first name",
+      "project": "chromium-fr",
+      "file": "ui/signup/validation/form-first-name.spec.ts",
+      "line": 77,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 10241,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\validation\\form-first-name.spec.ts",
+                "column": 57,
+                "line": 102
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('first-name-error-message-typography')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByTestId('first-name-error-message-typography') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('first-name-error-message-typography')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 100 |\u001b[39m                     validationCase\u001b[33m.\u001b[39mfirstName\u001b[33m,\u001b[39m\n \u001b[90m 101 |\u001b[39m                 )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 102 |\u001b[39m                 \u001b[36mawait\u001b[39m expect(signUpPage\u001b[33m.\u001b[39mfirstNameError)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 103 |\u001b[39m                 \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 104 |\u001b[39m             }\n \u001b[90m 105 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\validation\\form-first-name.spec.ts:102:57\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-004/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-004/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-004/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-004/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-004/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-004/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--39df8-icode-characters-first-name-chromium-fr\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-004/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "FORM-28: handles Unicode characters last name",
+      "project": "chromium-fr",
+      "file": "ui/signup/validation/form-last-name.spec.ts",
+      "line": 55,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 9286,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\validation\\form-last-name.spec.ts",
+                "column": 56,
+                "line": 80
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('last-name-error-message-typography')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByTestId('last-name-error-message-typography') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('last-name-error-message-typography')\u001b[22m\n\u001b[2m    13 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 78 |\u001b[39m                     validationCase\u001b[33m.\u001b[39mlastName\u001b[33m,\u001b[39m\n \u001b[90m 79 |\u001b[39m                 )\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 |\u001b[39m                 \u001b[36mawait\u001b[39m expect(signUpPage\u001b[33m.\u001b[39mlastNameError)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 |\u001b[39m                 \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 82 |\u001b[39m             }\n \u001b[90m 83 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\validation\\form-last-name.spec.ts:80:56\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-005/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-005/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-005/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-005/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-005/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-005/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c5fd8-nicode-characters-last-name-chromium-fr\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-005/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "FORM-12: handles phone number with too many digits",
+      "project": "chromium-fr",
+      "file": "ui/signup/validation/form-phone-number.spec.ts",
+      "line": 32,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 9383,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\validation\\form-phone-number.spec.ts",
+                "column": 55,
+                "line": 49
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('phone-error-message-typography')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByTestId('phone-error-message-typography') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('phone-error-message-typography')\u001b[22m\n\n\n\u001b[0m \u001b[90m 47 |\u001b[39m\n \u001b[90m 48 |\u001b[39m             \u001b[90m// Assert\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m             \u001b[36mawait\u001b[39m expect(signUpPage\u001b[33m.\u001b[39mphoneNumberError)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m         })\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m     }\n \u001b[90m 52 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\ui\\signup\\validation\\form-phone-number.spec.ts:49:55\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-006/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-006/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-006/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-006/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-006/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-006/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\ui-signup-validation-form--c088f-number-with-too-many-digits-chromium-fr\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T08-33-49-930Z/test-006/test.log",
+          "exists": true
+        }
+      ]
+    }
+  ],
+  "flakyTests": []
+}

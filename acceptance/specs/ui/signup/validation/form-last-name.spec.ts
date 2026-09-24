@@ -2,8 +2,6 @@ import { expectNoAccountCreationRequest } from "../../../../src/assertions/sign-
 import { expect, test } from "../../../../src/fixtures/ui/test-options.js";
 import { completeSignUpForm } from "../../../../src/test-helpers/complete-sign-up-form.js";
 
-test.use({ screenshot: "off" });
-
 const cases = [
 	{
 		id: "FORM-07",

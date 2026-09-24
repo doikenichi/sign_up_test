@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-09-24T08:18:48.601Z",
+  "report": "test-results/results.json",
+  "evidenceDirectory": ".playwright-work/evidence/2026-09-24T08-18-48-599Z",
+  "unexpectedFailureCount": 0,
+  "flakyTestCount": 0,
+  "tests": [],
+  "flakyTests": []
+}

@@ -18,7 +18,6 @@ test.describe("Sunny scenario - all fields are valid", () => {
 		// Act
 		await signUpPage.fillForm({
 			...data,
-			firstName: "",
 			phoneCountry: "CA",
 			provinceOfPurchase: "Ontario",
 			passwordConfirmation: data.password,
@@ -119,7 +118,11 @@ test.describe("Sunny scenario - all fields are valid", () => {
 		await expect(signUpPage.phoneCountrySelect).toHaveValue("CA");
 		await expect(signUpPage.phoneNumberInput).toHaveValue("(416) 555-0133");
 
-		await signUpPage.emailInput.focus();
+		// Trigger the phone field's blur validation without moving the viewport
+		// to the lower email field.
+		await signUpPage.phoneNumberInput.evaluate((element) => {
+			(element as HTMLElement).blur();
+		});
 		await expect(signUpPage.phoneCountrySelect).toHaveValue("CA");
 		await expect(signUpPage.phoneNumberInput).toHaveValue("(416) 555-0133");
 		await expect(signUpPage.phoneNumberError).toHaveCount(0);

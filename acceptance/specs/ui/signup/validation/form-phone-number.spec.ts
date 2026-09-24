@@ -2,8 +2,6 @@ import { expectNoAccountCreationRequest } from "../../../../src/assertions/sign-
 import { expect, test } from "../../../../src/fixtures/ui/test-options.js";
 import { completeSignUpForm } from "../../../../src/test-helpers/complete-sign-up-form.js";
 
-test.use({ screenshot: "off" });
-
 const invalidNumbers = [
 	{ description: "letters", phoneNumber: "41655ABCD" },
 	{ description: "too few digits", phoneNumber: "416555013" },

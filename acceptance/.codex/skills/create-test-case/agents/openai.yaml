@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Test Case"
+  short_description: "Create a test case from the project test plan."
+  default_prompt: "Use $create-test-case to create a Markdown test case for a test ID from the project test plan."

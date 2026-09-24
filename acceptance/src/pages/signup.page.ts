@@ -231,6 +231,13 @@ export class SignUpPage {
 		try {
 			await this.page.goto(this.content.path);
 			await this.expectToBeOnPage();
+			await expect(this.provinceOfPurchaseSelect).toHaveValue(/.+/);
+			await this.page.evaluate(() => {
+				const activeElement = document.activeElement;
+				if (activeElement instanceof HTMLElement) {
+					activeElement.blur();
+				}
+			});
 		} catch (error) {
 			this.logger.error("Sign-up page navigation failed", { error });
 			throw error;

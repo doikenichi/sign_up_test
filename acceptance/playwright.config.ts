@@ -77,9 +77,12 @@ export default defineConfig({
 	/* Opt out of parallel tests on CI. */
 	workers: process.env.CI ? 1 : undefined,
 	/* Reporter to use. See https://playwright.dev/docs/test-reporters */
+	/* print the results in local web server */
 	// reporter: "html",
 	reporter: [
-		["list", { printFailuresInline: true }],
+		/* print the results in the cli */
+		["list"],
+		/* create a json file with test results */
 		["json", { outputFile: "test-results/results.json" }],
 	],
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */

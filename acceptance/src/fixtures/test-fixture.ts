@@ -1,26 +1,35 @@
+import { readFile } from "node:fs/promises";
 import { test as base } from "@playwright/test";
 import type { Logger } from "winston";
 import { loadEnvironment } from "../config/environment.js";
 import { createLogger } from "../logging/logger.js";
 
-// That is a sensible choice because a logger is infrastructure, not a per-test browser resource. Creating it once per worker avoids unnecessary object churn.
-export type WorkerFixtures = {
+export type TestFixtures = {
 	logger: Logger;
 };
 
-// biome-ignore lint/complexity/noBannedTypes: Playwright uses this generic slot for no additional test fixtures.
-export const test = base.extend<{}, WorkerFixtures>({
-	logger: [
-		async ({ browserName }, use) => {
-			const environment = loadEnvironment();
-			const logger = createLogger(environment.logging);
+export const test = base.extend<TestFixtures>({
+	logger: async ({ browserName }, use, testInfo) => {
+		const environment = loadEnvironment();
+		const testLogPath = testInfo.outputPath("test.log");
+		const logger = createLogger(environment.logging, testLogPath);
 
-			logger.debug("Logger fixture initialized", { browserName });
-			await use(logger);
-			logger.close();
-		},
-		{ scope: "worker" },
-	],
+		logger.debug("Logger fixture initialized", { browserName });
+		await use(logger);
+		await closeLogger(logger);
+		await testInfo.attach("test.log", {
+			body: await readFile(testLogPath),
+			contentType: "text/plain",
+		});
+	},
 });
 
 export { expect } from "@playwright/test";
+
+function closeLogger(logger: Logger): Promise<void> {
+	return new Promise((resolve, reject) => {
+		logger.once("finish", resolve);
+		logger.once("error", reject);
+		logger.end();
+	});
+}

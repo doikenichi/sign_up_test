@@ -1,0 +1,2690 @@
+{
+  "generatedAt": "2026-09-24T07:01:16.246Z",
+  "report": "test-results/results.json",
+  "evidenceDirectory": ".playwright-work/evidence/2026-09-24T07-01-16-109Z",
+  "unexpectedFailureCount": 20,
+  "flakyTestCount": 0,
+  "tests": [
+    {
+      "title": "API-02: rejects an empty payload",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 18,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 763,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 15
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m500\u001b[39m\nReceived:   \u001b[31m500\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:15\n\n\u001b[0m \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m \t\u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m pattern \u001b[36mof\u001b[39m sensitiveErrorDetails) {\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:15:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:24:4\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-001/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-001/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-001/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-001/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-001/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-001/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-0e888-02-rejects-an-empty-payload-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-001/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects missing firstName",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 775,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-002/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-002/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-002/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-002/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-002/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-002/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-67129-2-rejects-missing-firstName-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-002/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects missing lastName",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 791,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-003/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-003/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-003/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-003/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-003/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-003/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7d7de-02-rejects-missing-lastName-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-003/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects missing phone",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 779,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-004/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-004/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-004/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-004/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-004/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-004/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-1e2b8-PI-02-rejects-missing-phone-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-004/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects missing region",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 836,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-005/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-005/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-005/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-005/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-005/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-005/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-af184-I-02-rejects-missing-region-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-005/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects missing password",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 626,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-006/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-006/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-006/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-006/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-006/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-006/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-954f2-02-rejects-missing-password-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-006/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects missing consent",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 606,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-007/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-007/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-007/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-007/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-007/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-007/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c8ec5--02-rejects-missing-consent-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-007/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects password length 11",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 419,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-008/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-008/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-008/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-008/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-008/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-008/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-7a482--rejects-password-length-11-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-008/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects password length 33",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 690,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-009/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-009/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-009/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-009/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-009/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-009/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-dceac--rejects-password-length-33-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-009/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects password without uppercase",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 421,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-010/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-010/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-010/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-010/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-010/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-010/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-57ced--password-without-uppercase-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-010/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects password without lowercase",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 500,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-011/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-011/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-011/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-011/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-011/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-011/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-33ff0--password-without-lowercase-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-011/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects password without number",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 544,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-012/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-012/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-012/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-012/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-012/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-012/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-799d8-cts-password-without-number-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-012/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects invalid phone",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 701,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-013/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-013/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-013/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-013/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-013/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-013/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-c68ca-PI-02-rejects-invalid-phone-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-013/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects incomplete phone",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 566,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-014/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-014/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-014/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-014/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-014/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-014/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-5edb8-02-rejects-incomplete-phone-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-014/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects phone with letters",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 387,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-015/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-015/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-015/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-015/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-015/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-015/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-ffac6--rejects-phone-with-letters-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-015/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-02: rejects control character in first name",
+      "project": "api",
+      "file": "api/signup/api-02-reject-missing-or-invalid-required-field.spec.ts",
+      "line": 42,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 519,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:96:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-02-reject-missing-or-invalid-required-field.spec.ts:54:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-016/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-016/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-016/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-016/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-016/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-016/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-02-reject-m-2046c-rol-character-in-first-name-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-016/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-03: rejects null firstName",
+      "project": "api",
+      "file": "api/signup/api-03-reject-malformed-or-unsupported-values.spec.ts",
+      "line": 19,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 496,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-03-reject-malformed-or-unsupported-values.spec.ts:75:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-03-reject-malformed-or-unsupported-values.spec.ts:31:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-017/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-017/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-017/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-017/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-017/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-017/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-6dbc2-I-03-rejects-null-firstName-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-017/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-03: rejects control character in lastName",
+      "project": "api",
+      "file": "api/signup/api-03-reject-malformed-or-unsupported-values.spec.ts",
+      "line": 19,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 669,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-03-reject-malformed-or-unsupported-values.spec.ts:75:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-03-reject-malformed-or-unsupported-values.spec.ts:31:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-018/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-018/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-018/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-018/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-018/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-018/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-f77f2-ntrol-character-in-lastName-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-018/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-03: rejects script markup in firstName",
+      "project": "api",
+      "file": "api/signup/api-03-reject-malformed-or-unsupported-values.spec.ts",
+      "line": 19,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 455,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-03-reject-malformed-or-unsupported-values.spec.ts:75:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-03-reject-malformed-or-unsupported-values.spec.ts:31:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-019/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-019/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-019/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-019/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-019/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-019/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-2e94e--script-markup-in-firstName-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-019/test.log",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "title": "API-03: rejects markup in lastName",
+      "project": "api",
+      "file": "api/signup/api-03-reject-malformed-or-unsupported-values.spec.ts",
+      "line": 19,
+      "expectedStatus": "passed",
+      "finalStatus": "failed",
+      "flaky": false,
+      "attempts": [
+        {
+          "retry": 0,
+          "status": "failed",
+          "duration": 400,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts",
+                "column": 28,
+                "line": 14
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m400\u001b[39m\nReceived:    \u001b[31m201\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\src\\assertions\\api\\expect-safe-api-rejection.ts:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m \treflectedValues\u001b[33m:\u001b[39m string[] \u001b[33m=\u001b[39m []\u001b[33m,\u001b[39m\n \u001b[90m 13 |\u001b[39m )\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m400\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m \t                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m \texpect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m500\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m \t\u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectSafeApiRejection (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\src\\assertions\\api\\expect-safe-api-rejection.ts:14:28)\u001b[22m\n\u001b[2m    at submitInvalidPayload (C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-03-reject-malformed-or-unsupported-values.spec.ts:75:9)\u001b[22m\n\u001b[2m    at C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\specs\\api\\signup\\api-03-reject-malformed-or-unsupported-values.spec.ts:31:5\u001b[22m"
+            }
+          ],
+          "attachments": [
+            {
+              "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+              "contentType": "text/html",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "api-traffic.json",
+              "contentType": "application/json",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\test-failed-1.png"
+            },
+            {
+              "name": "test.log",
+              "contentType": "text/plain",
+              "inlineBodyOmitted": true
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\trace.zip"
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "API request - POST - https://app.qa.nesto.ca/api/accounts",
+          "contentType": "text/html",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "api-traffic.json",
+          "contentType": "application/json",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\test-failed-1.png",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-020/test-failed-1.png"
+        },
+        {
+          "name": "test.log",
+          "contentType": "text/plain",
+          "source": null,
+          "inline": false,
+          "exists": false,
+          "staged": null
+        },
+        {
+          "name": "error-context",
+          "contentType": "text/markdown",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\error-context.md",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-020/error-context.md"
+        },
+        {
+          "name": "trace",
+          "contentType": "application/zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\trace.zip",
+          "inline": false,
+          "exists": true,
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-020/trace.zip"
+        }
+      ],
+      "availableArtifacts": [
+        {
+          "name": "test-failed-1.png",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\test-failed-1.png",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-020/test-failed-1.png",
+          "exists": true
+        },
+        {
+          "name": "error-context.md",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\error-context.md",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-020/error-context.md",
+          "exists": true
+        },
+        {
+          "name": "trace.zip",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\trace.zip",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-020/trace.zip",
+          "exists": true
+        },
+        {
+          "name": "test.log",
+          "source": "C:\\Users\\frlin\\OneDrive\\Documentos\\_prompt templates\\nesto\\integration\\challenge\\sign_up_test\\acceptance\\test-results\\api-signup-api-03-reject-m-47aa4--rejects-markup-in-lastName-api\\test.log",
+          "staged": ".playwright-work/evidence/2026-09-24T07-01-16-109Z/test-020/test.log",
+          "exists": true
+        }
+      ]
+    }
+  ],
+  "flakyTests": []
+}
